@@ -18,10 +18,10 @@ function App() {
       <Header />
        <main className='container'>
        <Routes>
-          <Route exact path="/" element={<Home/>}/>
-          <Route  path={`:id`} Component={PostDetails } />
-          <Route   path="/create" Component={CreatePost}/>
-          <Route   path={'/*'} element={<NotFounds/>}/>
+          <Route exact path="/My-App-Postas" element={<Home/>}/>
+          <Route  path={`/My-App-Postas/:id`} Component={PostDetails } />
+          <Route   path="/My-App-Postas/create" Component={CreatePost}/>
+          <Route   path={'/My-App-Postas/*'} element={<NotFounds/>}/>
         </Routes>
        </main>
         <Footer />

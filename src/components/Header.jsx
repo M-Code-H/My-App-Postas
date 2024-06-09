@@ -11,8 +11,8 @@ export default function Header() {
     </h1>
     <div className="links">
        
-        <Link className="btn" to="/">Home</Link>
-        <Link className="btn" to="/create">New Post</Link>
+        <Link className="btn" to="/My-App-Postas">Home</Link>
+        <Link className="btn" to="/My-App-Postas/create">New Post</Link>
     </div>
 </nav>
     </header>

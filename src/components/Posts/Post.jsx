@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 const Post = ({ post, deletePosts }) => {
 
   return (
-    <Link to={`/${post.id}`}  className="post" >
+    <Link to={`/My-App-Postas/${post.id}`}  className="post" >
       <img src={post.image} alt="" />
       <div className="post-author">
         <p>By : <b> {post.author ? post.author : "mohamed"}</b> </p>|

@@ -4,7 +4,7 @@ import useFetch from "../../useFetch";
 import Post from "./Post";
 import  CreatePost  from "./CreatePost";
  const Posts = () => {
-  let {Data , isloading , errorMasUser} = useFetch("http://localhost:3000/posts");
+  let {Data , isloading , errorMasUser} = useFetch("https://6665831dd122c2868e40e799.mockapi.io/angle/posts/posts");
   
  
   return (

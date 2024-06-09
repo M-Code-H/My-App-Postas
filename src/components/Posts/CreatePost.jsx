@@ -21,7 +21,7 @@ function CreatePost (pr) {
         Post.author = valueInput.author;
 
 
-        fetch(`http://localhost:3000/posts`, {
+        fetch(`https://6665831dd122c2868e40e799.mockapi.io/angle/posts/posts`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(Post),
@@ -29,7 +29,7 @@ function CreatePost (pr) {
           console.log("post added");
           
         // location.href =' http://localhost:5173';
-            historyPush('/')
+            historyPush('/My-App-Postas')
         });
       };
     return (
