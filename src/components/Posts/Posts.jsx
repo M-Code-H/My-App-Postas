@@ -11,12 +11,22 @@ import  CreatePost  from "./CreatePost";
     <section className="posts">
 
 
-    {isloading && <div>loading ...</div>}
-    {errorMasUser && (<h2 className="not-found">{errorMasUser}</h2>)}
+    {isloading && !Data && <div className="lodings">
+      <div className="spinner-border" role="status">
+  <span className="visually-hidden">Loading...</span>
+</div></div>}
+    {errorMasUser && (<div className="notFund">
+<h2 className="text-found">يرجى أعادة محاولة لأحقا</h2>
+</div>)}
+    {Data == "" && <div className="goAdd"><h1>Go!!! To add a post</h1></div>}
     {Data && !isloading && !errorMasUser && (Data.map((post) =>(
        <Post key={post.id} post={post}   />
       )) )}
-      
+      {/* <div className="lodings">
+      <div class="spinner-border" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div></div> */}
+
     </section>
   )
 }
