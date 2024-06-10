@@ -22,10 +22,7 @@ import  CreatePost  from "./CreatePost";
     {Data && !isloading && !errorMasUser && (Data.map((post) =>(
        <Post key={post.id} post={post}   />
       )) )}
-      {/* <div className="lodings">
-      <div class="spinner-border" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div></div> */}
+     
 
     </section>
   )

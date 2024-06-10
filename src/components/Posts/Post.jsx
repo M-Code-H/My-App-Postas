@@ -14,9 +14,10 @@ const Post = ({ post, deletePosts }) => {
           <h5 className="card-title">{post.title}</h5>
           <p className="card-text">{post.body}</p>
           {/* <img className="ima-post" src={post.image} alt="" /> */}
-          {!post.image == "" && <img src={post.image} alt="" className="ima-post" /> }
-          {post.image == "" && <div></div>}
-        </div>
+         <div className="img-card">
+         {!post.image == "" && <img src={post.image} alt="" className="ima-post" /> }
+         {post.image == "" && <div></div>}
+          </div>       </div>
       </div>
     </Link>
   );

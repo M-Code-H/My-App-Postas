@@ -477,11 +477,16 @@ position: relative;
   width: 100%;
   overflow: hidden;
 }
-.ima-post{
+.img-card{
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.ima-post{
+  width: 90%;
   height: 100%;
 
- max-height: 400px;
+ max-height: 470px;
 }
 .card-text{
   overflow: hidden;
