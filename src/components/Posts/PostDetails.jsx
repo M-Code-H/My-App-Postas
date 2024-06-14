@@ -44,7 +44,7 @@ export default function PostDetails(props) {
   }
 
 
-  return (
+  return (<>
     <div style={{position:"relative"}}>
       {isloading && <div style={{
         margin:"auto",
@@ -65,20 +65,21 @@ export default function PostDetails(props) {
       <div className="card">
   <div className="card-header">
     <img src={post.imageuser} className="img_profile" alt="" />
-    <b> {post.username ? post.username : "null"}</b> 
+    <b className="username-details"> @{post.username ? post.username : "null"}</b> 
 {/* <button className="btn" onClick={() => deletePosts(post.id)}>Delete</button> */}
 </div>
-  <div className="card-body">
+  <div className="card-body" dir={"auto"}>
     <h5 className="card-title">{post.title}</h5>
     <p className="card-text-details">{post.body}</p>
     {/* <img src={post.image} alt="" /> */}
+    <div className="item-post-img">
      {!post.image == "" && <img className="ima-post" src={post.image} alt="" /> }
-    {post.image == "" && <div></div>} 
+    {post.image == "" && <div></div>} </div>
   </div>
  <div className="buttons">
  <button className="clickBtn"onClick={()=>{
     const box =   document.querySelector(".box-delete");
-    box.style. transform=" translateY(-100%)"
+    box.style. transform=" translateY(-250%)"
      }} >Delete</button>
  </div>
   
@@ -86,7 +87,9 @@ export default function PostDetails(props) {
   
       </article>
       }
-<div className="box-delete" >
+
+    </div>
+    <div className="box-delete" >
   <FaX style={{
     position:"absolute",
     right:"25",
@@ -97,7 +100,7 @@ export default function PostDetails(props) {
 
   }} onClick={()=>{
     const box =   document.querySelector(".box-delete");
-    box.style. transform=" translateY(-300%)"
+    box.style. transform=" translateY(-600%)"
      }}/>
 <span style={{color:"red"}}></span>
  <input id="pass" type="text" placeholder="Password" onChange={test} />
@@ -106,7 +109,7 @@ export default function PostDetails(props) {
 box.style. transform=" translateY(-300%)"
  }} className="Btn" >Delete</button>
 </div>
-    </div>
+    </>
   )
 }
 
