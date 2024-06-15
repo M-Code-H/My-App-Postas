@@ -44,7 +44,7 @@ export default function PostDetails(props) {
   }
 
 
-  return (<>
+  return (<div className="container" style={{position:"relative" , height:"100%"}}>
     <div style={{position:"relative"}}>
       {isloading && <div style={{
         margin:"auto",
@@ -77,9 +77,9 @@ export default function PostDetails(props) {
     {post.image == "" && <div></div>} </div>
   </div>
  <div className="buttons">
- <button className="clickBtn"onClick={()=>{
+ <button className="clickBtn" onClick={()=>{
     const box =   document.querySelector(".box-delete");
-    box.style. transform=" translateY(-250%)"
+    box.style.top = "200px"
      }} >Delete</button>
  </div>
   
@@ -100,16 +100,16 @@ export default function PostDetails(props) {
 
   }} onClick={()=>{
     const box =   document.querySelector(".box-delete");
-    box.style. transform=" translateY(-600%)"
+    box.style.top="-200px"
      }}/>
 <span style={{color:"red"}}></span>
  <input id="pass" type="text" placeholder="Password" onChange={test} />
  <button onClick={()=>{
   handePass()
-box.style. transform=" translateY(-300%)"
+box.style.top="-200px"
  }} className="Btn" >Delete</button>
 </div>
-    </>
+    </div>
   )
 }
 

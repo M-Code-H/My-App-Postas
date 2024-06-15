@@ -10,7 +10,7 @@ const Post = ({ post, deletePosts }) => {
           <img src={post.imageuser} className="img_profile" alt="" />
           <p>@{post.username ? post.username : "null"}</p>
         </div>
-        <div className="card-body">
+        <div className="card-body" dir="auto">
           <h5 className="card-title">{post.title}</h5>
           <p className="card-text">{post.body}</p>
           {/* <img className="ima-post" src={post.image} alt="" /> */}

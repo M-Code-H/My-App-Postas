@@ -541,9 +541,11 @@ position: relative;
   background: #ffffff79;
   backdrop-filter: blur(16px);
   box-shadow: 0px 0px 10px white;
-  
   margin: auto;
- transform: translateY(-650%);
+  position: absolute;
+  top: -200px;
+  left: 0;
+  right: 0;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -568,6 +570,13 @@ position: relative;
   font-weight: 600;
   outline: none;
   border: none;
+}
+.create-post {
+  position: relative;
+}
+.create-post .lodings{
+  margin: auto;
+  position: absolute;
 }
 .create-post h2 {
   font-size: 1.5rem;
